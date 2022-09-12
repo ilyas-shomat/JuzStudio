@@ -7,18 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD1267AE28B6327F008EC465 /* JuzStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1267AD28B6327F008EC465 /* JuzStudioApp.swift */; };
-		FD1267B028B6327F008EC465 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1267AF28B6327F008EC465 /* ContentView.swift */; };
+		FD0FCADD28C893F4005303BD /* AppSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0FCADC28C893F4005303BD /* AppSlider.swift */; };
+		FD0FCAE028C89E66005303BD /* RulerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0FCADF28C89E66005303BD /* RulerView.swift */; };
 		FD1267B228B63281008EC465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD1267B128B63281008EC465 /* Assets.xcassets */; };
 		FD1267B528B63281008EC465 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD1267B428B63281008EC465 /* Preview Assets.xcassets */; };
+		FD1267BE28B632D3008EC465 /* AudioWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1267BC28B632D3008EC465 /* AudioWaveView.swift */; };
+		FD1267BF28B632D3008EC465 /* StudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1267BD28B632D3008EC465 /* StudioView.swift */; };
+		FD1267C228B7654E008EC465 /* StudioConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1267C128B7654E008EC465 /* StudioConstants.swift */; };
+		FD2609E528C5BA1100CE623F /* InExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2609E428C5BA1100CE623F /* InExtensions.swift */; };
+		FD3D3CA328BF4BA3008DDA51 /* StudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CA228BF4BA3008DDA51 /* StudioViewController.swift */; };
+		FD3D3CA628BF4D10008DDA51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CA528BF4D10008DDA51 /* AppDelegate.swift */; };
+		FD3D3CAA28BF4FC2008DDA51 /* MixerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CA928BF4FC2008DDA51 /* MixerCell.swift */; };
+		FD3D3CAD28BF53E6008DDA51 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CAC28BF53E6008DDA51 /* ViewExtensions.swift */; };
+		FD3D3CB028BF54AA008DDA51 /* MixerCellEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CAF28BF54AA008DDA51 /* MixerCellEntity.swift */; };
+		FD3D3CB228BF5733008DDA51 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CB128BF5733008DDA51 /* ColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD0FCADC28C893F4005303BD /* AppSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSlider.swift; sourceTree = "<group>"; };
+		FD0FCADF28C89E66005303BD /* RulerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulerView.swift; sourceTree = "<group>"; };
 		FD1267AA28B6327F008EC465 /* JuzStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuzStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD1267AD28B6327F008EC465 /* JuzStudioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuzStudioApp.swift; sourceTree = "<group>"; };
-		FD1267AF28B6327F008EC465 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FD1267B128B63281008EC465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD1267B428B63281008EC465 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FD1267BC28B632D3008EC465 /* AudioWaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioWaveView.swift; sourceTree = "<group>"; };
+		FD1267BD28B632D3008EC465 /* StudioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudioView.swift; sourceTree = "<group>"; };
+		FD1267C128B7654E008EC465 /* StudioConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioConstants.swift; sourceTree = "<group>"; };
+		FD2609E428C5BA1100CE623F /* InExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InExtensions.swift; sourceTree = "<group>"; };
+		FD2609E628C5BC4700CE623F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FD3D3CA228BF4BA3008DDA51 /* StudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioViewController.swift; sourceTree = "<group>"; };
+		FD3D3CA528BF4D10008DDA51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD3D3CA928BF4FC2008DDA51 /* MixerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerCell.swift; sourceTree = "<group>"; };
+		FD3D3CAC28BF53E6008DDA51 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		FD3D3CAF28BF54AA008DDA51 /* MixerCellEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerCellEntity.swift; sourceTree = "<group>"; };
+		FD3D3CB128BF5733008DDA51 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +53,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD0FCADB28C893C1005303BD /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				FD0FCADC28C893F4005303BD /* AppSlider.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		FD0FCADE28C89E5A005303BD /* Ruler */ = {
+			isa = PBXGroup;
+			children = (
+				FD0FCADF28C89E66005303BD /* RulerView.swift */,
+			);
+			path = Ruler;
+			sourceTree = "<group>";
+		};
 		FD1267A128B6327F008EC465 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +88,13 @@
 		FD1267AC28B6327F008EC465 /* JuzStudio */ = {
 			isa = PBXGroup;
 			children = (
-				FD1267AD28B6327F008EC465 /* JuzStudioApp.swift */,
-				FD1267AF28B6327F008EC465 /* ContentView.swift */,
+				FD2609E628C5BC4700CE623F /* Info.plist */,
+				FD3D3CA428BF4D03008DDA51 /* Application */,
+				FD3D3CAE28BF5482008DDA51 /* Entities */,
+				FD3D3CAB28BF53D3008DDA51 /* Extensions */,
+				FD1267C028B7653E008EC465 /* Common */,
+				FD0FCADB28C893C1005303BD /* CustomViews */,
+				FD1267BB28B632C9008EC465 /* Studio */,
 				FD1267B128B63281008EC465 /* Assets.xcassets */,
 				FD1267B328B63281008EC465 /* Preview Content */,
 			);
@@ -65,6 +107,76 @@
 				FD1267B428B63281008EC465 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FD1267BB28B632C9008EC465 /* Studio */ = {
+			isa = PBXGroup;
+			children = (
+				FD3D3CA028BF4B68008DDA51 /* Components */,
+				FD1267BD28B632D3008EC465 /* StudioView.swift */,
+				FD3D3CA228BF4BA3008DDA51 /* StudioViewController.swift */,
+			);
+			path = Studio;
+			sourceTree = "<group>";
+		};
+		FD1267C028B7653E008EC465 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FD1267C128B7654E008EC465 /* StudioConstants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FD3D3CA028BF4B68008DDA51 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FD0FCADE28C89E5A005303BD /* Ruler */,
+				FD3D3CA828BF4F91008DDA51 /* Mixer */,
+				FD3D3CA728BF4F86008DDA51 /* AudioWive */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FD3D3CA428BF4D03008DDA51 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FD3D3CA528BF4D10008DDA51 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FD3D3CA728BF4F86008DDA51 /* AudioWive */ = {
+			isa = PBXGroup;
+			children = (
+				FD1267BC28B632D3008EC465 /* AudioWaveView.swift */,
+			);
+			path = AudioWive;
+			sourceTree = "<group>";
+		};
+		FD3D3CA828BF4F91008DDA51 /* Mixer */ = {
+			isa = PBXGroup;
+			children = (
+				FD3D3CA928BF4FC2008DDA51 /* MixerCell.swift */,
+			);
+			path = Mixer;
+			sourceTree = "<group>";
+		};
+		FD3D3CAB28BF53D3008DDA51 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FD3D3CAC28BF53E6008DDA51 /* ViewExtensions.swift */,
+				FD3D3CB128BF5733008DDA51 /* ColorExtensions.swift */,
+				FD2609E428C5BA1100CE623F /* InExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FD3D3CAE28BF5482008DDA51 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FD3D3CAF28BF54AA008DDA51 /* MixerCellEntity.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +249,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD1267B028B6327F008EC465 /* ContentView.swift in Sources */,
-				FD1267AE28B6327F008EC465 /* JuzStudioApp.swift in Sources */,
+				FD3D3CA628BF4D10008DDA51 /* AppDelegate.swift in Sources */,
+				FD3D3CAD28BF53E6008DDA51 /* ViewExtensions.swift in Sources */,
+				FD2609E528C5BA1100CE623F /* InExtensions.swift in Sources */,
+				FD3D3CA328BF4BA3008DDA51 /* StudioViewController.swift in Sources */,
+				FD3D3CB228BF5733008DDA51 /* ColorExtensions.swift in Sources */,
+				FD1267C228B7654E008EC465 /* StudioConstants.swift in Sources */,
+				FD3D3CAA28BF4FC2008DDA51 /* MixerCell.swift in Sources */,
+				FD0FCAE028C89E66005303BD /* RulerView.swift in Sources */,
+				FD1267BF28B632D3008EC465 /* StudioView.swift in Sources */,
+				FD3D3CB028BF54AA008DDA51 /* MixerCellEntity.swift in Sources */,
+				FD0FCADD28C893F4005303BD /* AppSlider.swift in Sources */,
+				FD1267BE28B632D3008EC465 /* AudioWaveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +392,7 @@
 				DEVELOPMENT_TEAM = PB2762M9G4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = JuzStudio/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -299,7 +421,7 @@
 				DEVELOPMENT_TEAM = PB2762M9G4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = JuzStudio/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
