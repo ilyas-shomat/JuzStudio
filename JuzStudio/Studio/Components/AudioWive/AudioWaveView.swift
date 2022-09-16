@@ -15,6 +15,8 @@ struct AudioWaveView: View {
     @State var disappearedIndex: Int = 0
 
     @Binding var incrementor: Int
+    
+    private var reader: ScrollViewProxy
 
     private var bits: [CGFloat]
     private var waveColor: Color
@@ -24,32 +26,28 @@ struct AudioWaveView: View {
         incrementor: Binding<Int>,
         bits: [CGFloat],
         waveColor: Color,
-        setLastIndex: @escaping () -> Void
+        reader: ScrollViewProxy,
+        waveTapped: @escaping () -> Void
     ) {
         _incrementor = incrementor
         self.bits = bits
         self.waveColor = waveColor
-        self.waveTapped = setLastIndex
-        
+        self.waveTapped = waveTapped
+        self.reader = reader
     }
                         
     var body: some View {
-        ScrollViewReader { reader in
-            ScrollView(.horizontal, showsIndicators: false) {
-                setAudioWaveView()
-                    .frame(height: 40)
-            }
+        setAudioWaveView()
             .onChange(of: incrementor) { _ in
                 index += 1
+                
+                if index >= bits.count {
+                    waveTapped()
+                }
+                
                 reader.scrollTo(index)
             }
-            .simultaneousGesture(
-                DragGesture()
-                    .onChanged { gesture in
-                        waveTapped()
-                    }
-            )
-        }
+            .frame(height: 84)
     }
     
     private func setAudioWaveView() -> some View {

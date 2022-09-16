@@ -9,23 +9,42 @@ import Foundation
 import SwiftUI
 
 struct RulerView: View {
+    @State var index: Int = 0
+    @Binding var incrementor: Int
+
+    private var reader: ScrollViewProxy
+    private var bits: [CGFloat]
+    
+    init(
+        incrementor: Binding<Int>,
+        bits: [CGFloat],
+        reader: ScrollViewProxy
+    ) {
+        _incrementor = incrementor
+        
+        self.bits = bits
+        self.reader = reader
+    }
+    
     var body: some View {
-        ScrollViewReader { reader in
-            ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack(spacing: 21) {
-                    ForEach (0..<100, id: \.self) { i in
-                        if i % 4 == 0 {
-                            setStripe(height: 24,value: "\(Int(i/4) + 1)")
-                        }
-                        else {
-                            setStripe(height: 8)
-                        }
-                    }
-                }
-            }
-        }
+        rulerContent
         .background(Color.appWhiteWithOpacity)
         .frame(height: 24)
+        .disabled(true)
+    }
+    
+    private var rulerContent: some View {
+        LazyHStack(spacing: 21) {
+            ForEach (0..<Int(bits.count/9), id: \.self) { i in
+                if i % 4 == 0 {
+                    setStripe(height: 24,value: "\(Int(i/4) + 1)")
+                }
+                else {
+                    setStripe(height: 8)
+                }
+            }
+            Spacer()
+        }
     }
     
     private func setStripe(
@@ -65,11 +84,11 @@ struct RulerView: View {
 }
 
 
-struct RulerView_Previews: PreviewProvider {
-    static var previews: some View {
-        RulerView()
-        .previewLayout(.sizeThatFits)
-        .padding()
-        .background(.black)
-    }
-}
+//struct RulerView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RulerView()
+//        .previewLayout(.sizeThatFits)
+//        .padding()
+//        .background(.black)
+//    }
+//}

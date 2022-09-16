@@ -21,6 +21,7 @@
 		FD3D3CAD28BF53E6008DDA51 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CAC28BF53E6008DDA51 /* ViewExtensions.swift */; };
 		FD3D3CB028BF54AA008DDA51 /* MixerCellEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CAF28BF54AA008DDA51 /* MixerCellEntity.swift */; };
 		FD3D3CB228BF5733008DDA51 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CB128BF5733008DDA51 /* ColorExtensions.swift */; };
+		FDFB155028D323CF00F42B0A /* StudioBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB154F28D323CF00F42B0A /* StudioBottomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FD3D3CAC28BF53E6008DDA51 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		FD3D3CAF28BF54AA008DDA51 /* MixerCellEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerCellEntity.swift; sourceTree = "<group>"; };
 		FD3D3CB128BF5733008DDA51 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		FDFB154F28D323CF00F42B0A /* StudioBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioBottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		FD3D3CA028BF4B68008DDA51 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FDFB154E28D323B300F42B0A /* BottomView */,
 				FD0FCADE28C89E5A005303BD /* Ruler */,
 				FD3D3CA828BF4F91008DDA51 /* Mixer */,
 				FD3D3CA728BF4F86008DDA51 /* AudioWive */,
@@ -177,6 +180,14 @@
 				FD3D3CAF28BF54AA008DDA51 /* MixerCellEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		FDFB154E28D323B300F42B0A /* BottomView */ = {
+			isa = PBXGroup;
+			children = (
+				FDFB154F28D323CF00F42B0A /* StudioBottomView.swift */,
+			);
+			path = BottomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDFB155028D323CF00F42B0A /* StudioBottomView.swift in Sources */,
 				FD3D3CA628BF4D10008DDA51 /* AppDelegate.swift in Sources */,
 				FD3D3CAD28BF53E6008DDA51 /* ViewExtensions.swift in Sources */,
 				FD2609E528C5BA1100CE623F /* InExtensions.swift in Sources */,

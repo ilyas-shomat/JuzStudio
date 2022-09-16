@@ -12,8 +12,9 @@ extension Color {
     static let appPurple: Color = Color(hex: "#8A54FF")
     static let appLightBlue: Color = Color(hex: "#00BFFF")
     static let appWhiteWithOpacity: Color = .white.opacity(0.12)
-    static let appDarkPurple: Color = Color(hex: "#706A95")
+    static let appDarkPurple: Color = Color(hex: "##706A95")
     static let appLightGreen: Color = Color(hex: "#10C197")
+    static let appdarkBackground: Color = Color(hex: "#020517")
 }
 
 

@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import UIKit
 import Combine
 
 struct StudioView: View {
@@ -19,30 +20,12 @@ struct StudioView: View {
     var body: some View {
         VStack {
             headerView
-            rulerView
             contentView
             Spacer()
-            
-            Button("continue") {
-                viewController.startTimer()
-            }
-            
-            Button("add new bits") {
-                
-            }
-            
-            Button("tap mixer unfold") {
-                withAnimation(.linear(duration: 0.5)) {
-                    if viewController.mixerFoldedState == .medium {
-                        viewController.mixerFoldedState = .full
-                    }
-                    else {
-                        viewController.mixerFoldedState = .medium
-                    }
-                }
-            }
+            bottomView
         }
-        .background(.black)
+        .background(Color.appdarkBackground
+        )
         .ignoresSafeArea()
     }
     
@@ -78,59 +61,94 @@ struct StudioView: View {
         .padding(.top, 10.withSafeAreaInset(.top))
     }
     
-    private var rulerView: some View {
-        var leadingPadding: CGFloat = 187
-        
-        if viewController.mixerFoldedState == .full {
-            leadingPadding = 280
+    private var contentView: some View {
+        HStack {
+            audioTypesView
+            bitsView
         }
-        
-        return RulerView().padding(.leading, leadingPadding + 5)
     }
     
-    private var contentView: some View {
-        VStack(spacing: 5) {
-            HStack {
+    private var audioTypesView: some View {
+        VStack(spacing: 0) {
+            Rectangle()
+                .foregroundColor(.clear)
+                .frame(width: 48, height: 24)
+                        
+            ForEach(0..<viewController.mixerCellEntities.count, id: \.self) { index in
+                let isEmptyMixerType = viewController.mixerCellEntities[index].type == .empty
+                
                 MixerCell(
-                    entity: viewController.mixerCellEntities[0],
-                    backgroundColor: viewController.mixerCellColors[0],
+                    entity: viewController.mixerCellEntities[index],
+                    backgroundColor: isEmptyMixerType ? .appWhiteWithOpacity : viewController.mixerCellColors[index],
                     mixerFoldedState: viewController.mixerFoldedState,
                     tapAddNewVoice: viewController.addNewMixerVoice
                 )
-            
-                AudioWaveView(
-                    incrementor: $viewController.incrementor,
-                    bits: viewController.bits,
-                    waveColor: viewController.mixerCellColors[0],
-                    setLastIndex: viewController.stopTimer
-                )
-            }
-
-        
-            ForEach(1..<viewController.mixerCellEntities.count, id: \.self) { index in
-                HStack {
-                    let isEmptyMixerType = viewController.mixerCellEntities[index].type == .empty
-                    
-                    MixerCell(
-                        entity: viewController.mixerCellEntities[index],
-                        backgroundColor: isEmptyMixerType ? .appWhiteWithOpacity : viewController.mixerCellColors[index],
-                        mixerFoldedState: viewController.mixerFoldedState,
-                        tapAddNewVoice: viewController.addNewMixerVoice
-                    )
                 
-                    if viewController.mixerCellEntities[index].type != .empty {
-                        AudioWaveView(
-                            incrementor: $viewController.incrementor,
+                if index < viewController.mixerCellEntities.count - 1 {
+                    Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(width: 48, height: 10)
+                }
+            }
+            
+            Spacer()
+        }
+    }
+    
+    private var bitsView: some View {
+        VStack(spacing: 0) {
+            ScrollViewReader { reader in
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        RulerView(
+                            incrementor:  $viewController.incrementor,
                             bits: viewController.bits,
-                            waveColor: viewController.mixerCellColors[index],
-                            setLastIndex: viewController.stopTimer
+                            reader: reader
                         )
+                        Spacer()
                     }
                     
-                    Spacer()
+                    ForEach(0..<viewController.mixerCellEntities.count, id: \.self) { index in
+                        HStack(spacing: 0) {
+                            if viewController.mixerCellEntities[index].type != .empty {
+                                AudioWaveView(
+                                    incrementor: $viewController.incrementor,
+                                    bits: viewController.bits,
+                                    waveColor: viewController.mixerCellColors[index],
+                                    reader: reader,
+                                    waveTapped: viewController.stopTimer
+                                )
+                            }
+                            
+                            else {
+                                Rectangle()
+                                    .foregroundColor(.clear)
+                                    .frame(width: 48, height: 84)
+                            }
+                            Spacer()
+                        }
+                    }
+                }
+                .simultaneousGesture(
+                    DragGesture()
+                        .onChanged { gesture in
+                            viewController.stopTimer()
+                        }
+                )
             }
-            }
+            Spacer()
         }
+    }
+    
+    private var bottomView: some View {
+        StudioBottomView(
+            isMagicSelected: $viewController.isMagicSelected,
+            bottomOption: $viewController.selectedBottomOption,
+            mixerButtonTapped: viewController.mixerTapped,
+            recordButtonTapped: viewController.recordTapped,
+            playButtonTapped: viewController.playTapped,
+            restartButtonTapped: viewController.restartTapped
+        )
     }
 }
 
