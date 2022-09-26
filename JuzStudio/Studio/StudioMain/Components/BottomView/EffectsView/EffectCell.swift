@@ -45,11 +45,3 @@ struct EffectCell: View {
             .foregroundColor(entity.isSelected ? .appDarkPurple : .white)
     }
 }
-
-//struct EffectCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EffectCell(entity: .init(effectType: <#EffectsPopUpType#>, name: "Delay", image: "delay", isSelected: true))
-//            .previewLayout(.sizeThatFits)
-//            .background(Color.appdarkBackground)
-//    }
-//}

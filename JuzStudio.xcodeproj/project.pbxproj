@@ -31,6 +31,7 @@
 		FD6075E428DC55DA00C96134 /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6075E328DC55DA00C96134 /* CustomModalViewController.swift */; };
 		FD6075E628DDB47300C96134 /* EffectsPopUpType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6075E528DDB47300C96134 /* EffectsPopUpType.swift */; };
 		FD8A2FAB28E1AE690089E047 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8A2FAA28E1AE690089E047 /* DoubleExtension.swift */; };
+		FD8A2FAE28E1BBC90089E047 /* LyricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8A2FAD28E1BBC90089E047 /* LyricsView.swift */; };
 		FDFB155028D323CF00F42B0A /* StudioBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB154F28D323CF00F42B0A /* StudioBottomView.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		FD6075E328DC55DA00C96134 /* CustomModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
 		FD6075E528DDB47300C96134 /* EffectsPopUpType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsPopUpType.swift; sourceTree = "<group>"; };
 		FD8A2FAA28E1AE690089E047 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		FD8A2FAD28E1BBC90089E047 /* LyricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsView.swift; sourceTree = "<group>"; };
 		FDFB154F28D323CF00F42B0A /* StudioBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioBottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -243,9 +245,18 @@
 			path = temp;
 			sourceTree = "<group>";
 		};
+		FD8A2FAC28E1BBAB0089E047 /* LyricsView */ = {
+			isa = PBXGroup;
+			children = (
+				FD8A2FAD28E1BBC90089E047 /* LyricsView.swift */,
+			);
+			path = LyricsView;
+			sourceTree = "<group>";
+		};
 		FDFB154E28D323B300F42B0A /* BottomView */ = {
 			isa = PBXGroup;
 			children = (
+				FD8A2FAC28E1BBAB0089E047 /* LyricsView */,
 				FD1CB33428D47D6900B1CCCD /* EffectsView */,
 				FDFB154F28D323CF00F42B0A /* StudioBottomView.swift */,
 			);
@@ -326,6 +337,7 @@
 				FD6075E628DDB47300C96134 /* EffectsPopUpType.swift in Sources */,
 				FDFB155028D323CF00F42B0A /* StudioBottomView.swift in Sources */,
 				FD3D3CA628BF4D10008DDA51 /* AppDelegate.swift in Sources */,
+				FD8A2FAE28E1BBC90089E047 /* LyricsView.swift in Sources */,
 				FD1CB33628D47D8300B1CCCD /* EffectCell.swift in Sources */,
 				FD3D3CAD28BF53E6008DDA51 /* ViewExtensions.swift in Sources */,
 				FD2609E528C5BA1100CE623F /* InExtensions.swift in Sources */,

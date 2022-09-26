@@ -16,7 +16,7 @@ final class StudioMainViewController: UIViewController, ObservableObject {
     
     let mixerCellColors: [Color] = [.appPurple, .appLightBlue, .appLightGreen]
     
-    var mixerCellEntities: [MixerCellEntity] = [
+    @Published var mixerCellEntities: [MixerCellEntity] = [
         .init(type: .music, desc1: "Beat’s Name", desc2: "Beat’s Key"),
 //        .init(type:  .voice, desc1: "Голос"),
         .init(type: .voice, desc1: "Голос"),
@@ -165,7 +165,7 @@ final class StudioMainViewController: UIViewController, ObservableObject {
     }
 }
 
-
+// MARK: Testing values
 
 var testBits1: [CGFloat] = [
     0.8, 0.9, 1, 0.45, 0.7, 0.1, 0.3, 0.5, 0.5, 0.3, 0.8, 0.9, 1, 0.45, 0.7, 0.3, 0.5, 0.5, 0.3, 0.8, 0.9, 0.3, 0.8,

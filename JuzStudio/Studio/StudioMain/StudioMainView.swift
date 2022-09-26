@@ -21,7 +21,14 @@ struct StudioMainView: View {
         ZStack {
             VStack {
                 headerView
-                contentView
+
+                if viewController.selectedBottomOption == .lyrics {
+                    LyricsView()
+                }
+                else {
+                    contentView
+                }
+                
                 Spacer()
                 bottomView
             }
@@ -52,15 +59,16 @@ struct StudioMainView: View {
             
             Spacer()
             VStack {
-                Text("Recording")
+                Text(viewController.selectedBottomOption == .lyrics ? "Lyrics" : "Recording")
                     .foregroundColor(.white)
                     .bold()
+                
                 HStack {
                     Spacer()
                     Circle()
                         .frame(width: 8, height: 8)
-                        .foregroundColor(.red)
-                    Text("00:00:00")
+                        .foregroundColor(viewController.selectedBottomOption == .lyrics ? .clear : .red)
+                    Text(viewController.selectedBottomOption == .lyrics ? "" : "00:00:00")
                         .foregroundColor(.white)
                         .font(Font.system(size: 15))
                     Spacer()
@@ -168,12 +176,6 @@ struct StudioMainView: View {
             effectsButtonTap: viewController.effectTypeSelected
         )
     }
-    
-//    private func toggleEffectsSlidongOption() {
-//        withAnimation(.linear) {
-//            viewController.isEffectsSlidingOptionOpened.toggle()
-//        }
-//    }
 }
 
 struct StudioMainView_Previews: PreviewProvider {

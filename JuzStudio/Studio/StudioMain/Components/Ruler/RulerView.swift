@@ -82,13 +82,3 @@ struct RulerView: View {
         }
     }
 }
-
-
-//struct RulerView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RulerView()
-//        .previewLayout(.sizeThatFits)
-//        .padding()
-//        .background(.black)
-//    }
-//}

@@ -37,18 +37,3 @@ struct EffectsView: View {
         }
     }
 }
-
-//struct EffectsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EffectsView(entities: [
-//            .init(name: "Delay", image: "delay", isSelected: true),
-//            .init(name: "Reverb", image: "reverb", isSelected: true),
-//            .init(name: "EQ", image: "eq", isSelected: true),
-//            .init(name: "Compressor", image: "compressor", isSelected: true),
-//            .init(name: "R-Box", image: "rbox", isSelected: true),
-//
-//        ])
-//        .previewLayout(.sizeThatFits)
-//        .background(Color.appdarkBackground)
-//    }
-//}

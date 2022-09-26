@@ -135,10 +135,3 @@ struct EffectsPopUpView: View {
         }
     }
 }
-
-//struct EffectsPopUpView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EffectsPopUpView(type: .constant(.delay), swipedToPop: {})
-//            .background(Color.appdarkBackground)
-//    }
-//}
