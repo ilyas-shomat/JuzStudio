@@ -56,7 +56,7 @@ struct RulerView: View {
                 HStack(spacing: 3) {
                     Divider()
                         .frame(width: 1, height: height)
-                        .background(.white)
+                        .background(Color.white)
                     
                     VStack {
                         Text(value)
@@ -74,7 +74,7 @@ struct RulerView: View {
                     HStack {
                         Divider()
                             .frame(width: 1, height: height)
-                            .background(.white)
+                            .background(Color.white)
                             .padding(.trailing, 6)
                     }
                 }

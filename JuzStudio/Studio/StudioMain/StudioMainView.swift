@@ -10,28 +10,44 @@ import SwiftUI
 import UIKit
 import Combine
 
-struct StudioView: View {
-    @ObservedObject private var viewController: StudioViewController
-        
-    init(_ viewController: StudioViewController) {
+struct StudioMainView: View {
+    @ObservedObject private var viewController: StudioMainViewController
+            
+    init(_ viewController: StudioMainViewController) {
         self.viewController = viewController
     }
     
     var body: some View {
-        VStack {
-            headerView
-            contentView
-            Spacer()
-            bottomView
+        ZStack {
+            VStack {
+                headerView
+                contentView
+                Spacer()
+                bottomView
+            }
+            
+            if viewController.isEffectsSlidingOptionOpened {
+                VStack {
+                    Spacer()
+                    EffectsPopUpView(
+                        type: $viewController.currentEffectType,
+                        typeDict: $viewController.typeDict,
+                        swipedToPop: viewController.swipedDownEffectsPopUp,
+                        playButtonTapped: viewController.playTapped,
+                        restartButtonTapped: viewController.restartTapped,
+                        effectsButtonTap: viewController.effectTypeSelected
+                    )
+                }
+                .transition(.move(edge: .bottom))
+            }
         }
-        .background(Color.appdarkBackground
-        )
+        .background(Color.appdarkBackground)
         .ignoresSafeArea()
     }
     
     private var headerView: some View {
         HStack {
-            Image("backButton")
+            Image("backButtonviewController")
                 .padding(.bottom, 30)
             
             Spacer()
@@ -144,17 +160,25 @@ struct StudioView: View {
         StudioBottomView(
             isMagicSelected: $viewController.isMagicSelected,
             bottomOption: $viewController.selectedBottomOption,
+            effectCellEntities: viewController.effectsCellEntities,
             mixerButtonTapped: viewController.mixerTapped,
             recordButtonTapped: viewController.recordTapped,
             playButtonTapped: viewController.playTapped,
-            restartButtonTapped: viewController.restartTapped
+            restartButtonTapped: viewController.restartTapped,
+            effectsButtonTap: viewController.effectTypeSelected
         )
     }
+    
+//    private func toggleEffectsSlidongOption() {
+//        withAnimation(.linear) {
+//            viewController.isEffectsSlidingOptionOpened.toggle()
+//        }
+//    }
 }
 
 struct StudioMainView_Previews: PreviewProvider {
     static var previews: some View {
-        StudioView(StudioViewController())
+        StudioMainView(StudioMainViewController())
     }
 }
 

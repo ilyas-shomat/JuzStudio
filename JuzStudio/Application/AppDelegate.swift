@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func setupRootScene() {
         guard let window = window else { return }
-        window.rootViewController = StudioViewController()
+        window.rootViewController = StudioMainViewController()
         window.makeKeyAndVisible()
     }
 }

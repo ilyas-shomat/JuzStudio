@@ -56,7 +56,7 @@ struct MixerCell: View {
                 fullUnfoldedStateView
             }
         }
-        .background(.clear)
+        .background(Color.clear)
         .onTapGesture {
             if entity.type == .empty {
                 tapAddNewVoice?()
@@ -152,7 +152,7 @@ struct MixerCell_Previews: PreviewProvider {
             backgroundColor: .appLightBlue
         )
             .previewLayout(.sizeThatFits)
-            .background(.black)
+            .background(Color.black)
     }
 }
 
@@ -165,7 +165,7 @@ struct MixerCell_Previews_Low_Unfolded: PreviewProvider {
             
         )
         .previewLayout(.sizeThatFits)
-        .background(.black)
+        .background(Color.black)
     }
 }
 
@@ -176,7 +176,7 @@ struct MixerCell_Previews_Active_Voice: PreviewProvider {
             backgroundColor: .appLightBlue
         )
             .previewLayout(.sizeThatFits)
-            .background(.black)
+            .background(Color.black)
     }
 }
 
@@ -188,7 +188,7 @@ struct MixerCell_Previews_Empty_State: PreviewProvider {
             mixerFoldedState: .full
         )
         .previewLayout(.sizeThatFits)
-        .background(.black)
+        .background(Color.black)
     }
 }
 
@@ -200,7 +200,7 @@ struct MixerCell_Previews_Empty_Medium_State: PreviewProvider {
             mixerFoldedState: .medium
         )
         .previewLayout(.sizeThatFits)
-        .background(.black)
+        .background(Color.black)
     }
 }
 
@@ -212,7 +212,7 @@ struct MixerCell_Previews_Unfolded: PreviewProvider {
             mixerFoldedState: .full
         )
         .previewLayout(.sizeThatFits)
-        .background(.black)
+        .background(Color.black)
     }
 }
 

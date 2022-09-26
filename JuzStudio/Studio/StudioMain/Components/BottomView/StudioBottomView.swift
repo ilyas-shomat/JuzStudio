@@ -18,26 +18,33 @@ struct StudioBottomView: View {
     @Binding private var isMagicSelected: Bool
     @Binding private var bottomOption: StudioBottomViewSelectedOption
     
+    private var effectCellEntities: [EffectCellEntity]
+    
     private var mixerButtonTapped: () -> Void
     private var recordButtonTapped: () -> Void
     private var playButtonTapped: () -> Void
     private var restartButtonTapped: () -> Void
+    private var effectsButtonTap: (EffectsPopUpType) -> Void
     
     init(
         isMagicSelected: Binding<Bool>,
         bottomOption: Binding<StudioBottomViewSelectedOption>,
+        effectCellEntities: [EffectCellEntity],
         mixerButtonTapped: @escaping () -> Void,
         recordButtonTapped: @escaping () -> Void,
         playButtonTapped: @escaping () -> Void,
-        restartButtonTapped: @escaping () -> Void
+        restartButtonTapped: @escaping () -> Void,
+        effectsButtonTap: @escaping (EffectsPopUpType) -> Void
     ) {
         _isMagicSelected = isMagicSelected
         _bottomOption = bottomOption
         
+        self.effectCellEntities = effectCellEntities
         self.mixerButtonTapped = mixerButtonTapped
         self.recordButtonTapped = recordButtonTapped
         self.playButtonTapped = playButtonTapped
         self.restartButtonTapped = restartButtonTapped
+        self.effectsButtonTap = effectsButtonTap
     }
     
     var body: some View {
@@ -45,18 +52,23 @@ struct StudioBottomView: View {
     }
     
     private var mainStudioButtons: some View {
-        ZStack {
-            allStudioButtons
+        VStack {
+            Spacer()
             
-//            if showingBottomSheet {
-//                BottomSheet(showOverlay: $showingBottomSheet)
-//            }
+            if bottomOption == .effects {
+                EffectsView(
+                    entities: effectCellEntities,
+                    effectsButtonTap: effectsButtonTap
+                )
+                .transition(.move(edge: .leading))
+            }
+            
+            allStudioButtons
         }
     }
     
     private var allStudioButtons: some View {
         VStack(alignment: .center, spacing: 15) {
-            Spacer()
             studioTopButtons
             studioBottomButtons
         }
@@ -74,7 +86,6 @@ struct StudioBottomView: View {
             Spacer()
             magicButton
         }
-//        .background(.black)
     }
     
     private var studioBottomButtons: some View {
@@ -84,7 +95,6 @@ struct StudioBottomView: View {
             lyricsButton
         }
         .offset(x: -10)
-//        .background(.black)
     }
     
     private var mixerButton: some View {
@@ -130,19 +140,11 @@ struct StudioBottomView: View {
     }
     
     private var effectsButton: some View {
-//        Button {
-//            bottomOptionSelected(.effects)
-//            withAnimation {
-//                self.showingBottomSheet.toggle()
-//            }
-//        } label: {
-//            Text("Effects")
-//                .foregroundColor(bottomOptions == .effects ? .gray : .white)
-//        }
-        
         Button(
             action: {
-                bottomOption = .effects
+                withAnimation() {
+                    bottomOption = .effects
+                }
             },
             label: {
                 Text("Effects")
@@ -154,7 +156,9 @@ struct StudioBottomView: View {
     private var studioButton: some View {
         Button(
             action: {
-                bottomOption = .studio
+                withAnimation() {
+                    bottomOption = .studio
+                }
             },
             label: {
                 Text("Studio")
@@ -166,7 +170,9 @@ struct StudioBottomView: View {
     private var lyricsButton: some View {
         Button(
             action: {
-                bottomOption = .lyrics
+                withAnimation() {
+                    bottomOption = .lyrics
+                }
             },
             label: {
                 Text("Lyrics")
@@ -175,10 +181,3 @@ struct StudioBottomView: View {
         )
     }
 }
-
-
-//struct StudioBottomView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        StudioBottomView()
-//    }
-//}

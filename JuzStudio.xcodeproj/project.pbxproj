@@ -12,15 +12,25 @@
 		FD1267B228B63281008EC465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD1267B128B63281008EC465 /* Assets.xcassets */; };
 		FD1267B528B63281008EC465 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD1267B428B63281008EC465 /* Preview Assets.xcassets */; };
 		FD1267BE28B632D3008EC465 /* AudioWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1267BC28B632D3008EC465 /* AudioWaveView.swift */; };
-		FD1267BF28B632D3008EC465 /* StudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1267BD28B632D3008EC465 /* StudioView.swift */; };
+		FD1267BF28B632D3008EC465 /* StudioMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1267BD28B632D3008EC465 /* StudioMainView.swift */; };
 		FD1267C228B7654E008EC465 /* StudioConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1267C128B7654E008EC465 /* StudioConstants.swift */; };
+		FD1CB33628D47D8300B1CCCD /* EffectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1CB33528D47D8300B1CCCD /* EffectCell.swift */; };
+		FD1CB33828D47D9700B1CCCD /* EffectCellEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1CB33728D47D9700B1CCCD /* EffectCellEntity.swift */; };
+		FD1CB33A28D47FA000B1CCCD /* EffectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1CB33928D47FA000B1CCCD /* EffectsView.swift */; };
 		FD2609E528C5BA1100CE623F /* InExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2609E428C5BA1100CE623F /* InExtensions.swift */; };
-		FD3D3CA328BF4BA3008DDA51 /* StudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CA228BF4BA3008DDA51 /* StudioViewController.swift */; };
+		FD33D48428D865ED009B373E /* EffectsPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD33D48328D865ED009B373E /* EffectsPopUpView.swift */; };
+		FD33D48728D8665F009B373E /* EffectsPopUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD33D48628D8665F009B373E /* EffectsPopUpCell.swift */; };
+		FD33D48E28D8694D009B373E /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD33D48D28D8694D009B373E /* UIColorExtensions.swift */; };
+		FD33D49028D869AF009B373E /* EffectsPopUpCellEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD33D48F28D869AF009B373E /* EffectsPopUpCellEntity.swift */; };
+		FD3D3CA328BF4BA3008DDA51 /* StudioMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CA228BF4BA3008DDA51 /* StudioMainViewController.swift */; };
 		FD3D3CA628BF4D10008DDA51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CA528BF4D10008DDA51 /* AppDelegate.swift */; };
 		FD3D3CAA28BF4FC2008DDA51 /* MixerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CA928BF4FC2008DDA51 /* MixerCell.swift */; };
 		FD3D3CAD28BF53E6008DDA51 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CAC28BF53E6008DDA51 /* ViewExtensions.swift */; };
 		FD3D3CB028BF54AA008DDA51 /* MixerCellEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CAF28BF54AA008DDA51 /* MixerCellEntity.swift */; };
 		FD3D3CB228BF5733008DDA51 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CB128BF5733008DDA51 /* ColorExtensions.swift */; };
+		FD6075E428DC55DA00C96134 /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6075E328DC55DA00C96134 /* CustomModalViewController.swift */; };
+		FD6075E628DDB47300C96134 /* EffectsPopUpType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6075E528DDB47300C96134 /* EffectsPopUpType.swift */; };
+		FD8A2FAB28E1AE690089E047 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8A2FAA28E1AE690089E047 /* DoubleExtension.swift */; };
 		FDFB155028D323CF00F42B0A /* StudioBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB154F28D323CF00F42B0A /* StudioBottomView.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,16 +41,26 @@
 		FD1267B128B63281008EC465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD1267B428B63281008EC465 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FD1267BC28B632D3008EC465 /* AudioWaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioWaveView.swift; sourceTree = "<group>"; };
-		FD1267BD28B632D3008EC465 /* StudioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudioView.swift; sourceTree = "<group>"; };
+		FD1267BD28B632D3008EC465 /* StudioMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudioMainView.swift; sourceTree = "<group>"; };
 		FD1267C128B7654E008EC465 /* StudioConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioConstants.swift; sourceTree = "<group>"; };
+		FD1CB33528D47D8300B1CCCD /* EffectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectCell.swift; sourceTree = "<group>"; };
+		FD1CB33728D47D9700B1CCCD /* EffectCellEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectCellEntity.swift; sourceTree = "<group>"; };
+		FD1CB33928D47FA000B1CCCD /* EffectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsView.swift; sourceTree = "<group>"; };
 		FD2609E428C5BA1100CE623F /* InExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InExtensions.swift; sourceTree = "<group>"; };
 		FD2609E628C5BC4700CE623F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		FD3D3CA228BF4BA3008DDA51 /* StudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioViewController.swift; sourceTree = "<group>"; };
+		FD33D48328D865ED009B373E /* EffectsPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsPopUpView.swift; sourceTree = "<group>"; };
+		FD33D48628D8665F009B373E /* EffectsPopUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsPopUpCell.swift; sourceTree = "<group>"; };
+		FD33D48D28D8694D009B373E /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		FD33D48F28D869AF009B373E /* EffectsPopUpCellEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsPopUpCellEntity.swift; sourceTree = "<group>"; };
+		FD3D3CA228BF4BA3008DDA51 /* StudioMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioMainViewController.swift; sourceTree = "<group>"; };
 		FD3D3CA528BF4D10008DDA51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD3D3CA928BF4FC2008DDA51 /* MixerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerCell.swift; sourceTree = "<group>"; };
 		FD3D3CAC28BF53E6008DDA51 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		FD3D3CAF28BF54AA008DDA51 /* MixerCellEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerCellEntity.swift; sourceTree = "<group>"; };
 		FD3D3CB128BF5733008DDA51 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		FD6075E328DC55DA00C96134 /* CustomModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
+		FD6075E528DDB47300C96134 /* EffectsPopUpType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsPopUpType.swift; sourceTree = "<group>"; };
+		FD8A2FAA28E1AE690089E047 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		FDFB154F28D323CF00F42B0A /* StudioBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioBottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +110,7 @@
 		FD1267AC28B6327F008EC465 /* JuzStudio */ = {
 			isa = PBXGroup;
 			children = (
+				FD6075E228DC55C900C96134 /* temp */,
 				FD2609E628C5BC4700CE623F /* Info.plist */,
 				FD3D3CA428BF4D03008DDA51 /* Application */,
 				FD3D3CAE28BF5482008DDA51 /* Entities */,
@@ -114,9 +135,7 @@
 		FD1267BB28B632C9008EC465 /* Studio */ = {
 			isa = PBXGroup;
 			children = (
-				FD3D3CA028BF4B68008DDA51 /* Components */,
-				FD1267BD28B632D3008EC465 /* StudioView.swift */,
-				FD3D3CA228BF4BA3008DDA51 /* StudioViewController.swift */,
+				FD33D49128D870A8009B373E /* StudioMain */,
 			);
 			path = Studio;
 			sourceTree = "<group>";
@@ -129,9 +148,39 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		FD1CB33428D47D6900B1CCCD /* EffectsView */ = {
+			isa = PBXGroup;
+			children = (
+				FD1CB33928D47FA000B1CCCD /* EffectsView.swift */,
+				FD1CB33528D47D8300B1CCCD /* EffectCell.swift */,
+			);
+			path = EffectsView;
+			sourceTree = "<group>";
+		};
+		FD33D49128D870A8009B373E /* StudioMain */ = {
+			isa = PBXGroup;
+			children = (
+				FD3D3CA028BF4B68008DDA51 /* Components */,
+				FD1267BD28B632D3008EC465 /* StudioMainView.swift */,
+				FD3D3CA228BF4BA3008DDA51 /* StudioMainViewController.swift */,
+			);
+			path = StudioMain;
+			sourceTree = "<group>";
+		};
+		FD33D49228D870B4009B373E /* EffectsPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				FD6075E528DDB47300C96134 /* EffectsPopUpType.swift */,
+				FD33D48628D8665F009B373E /* EffectsPopUpCell.swift */,
+				FD33D48328D865ED009B373E /* EffectsPopUpView.swift */,
+			);
+			path = EffectsPopUp;
+			sourceTree = "<group>";
+		};
 		FD3D3CA028BF4B68008DDA51 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FD33D49228D870B4009B373E /* EffectsPopUp */,
 				FDFB154E28D323B300F42B0A /* BottomView */,
 				FD0FCADE28C89E5A005303BD /* Ruler */,
 				FD3D3CA828BF4F91008DDA51 /* Mixer */,
@@ -168,8 +217,10 @@
 			isa = PBXGroup;
 			children = (
 				FD3D3CAC28BF53E6008DDA51 /* ViewExtensions.swift */,
-				FD3D3CB128BF5733008DDA51 /* ColorExtensions.swift */,
 				FD2609E428C5BA1100CE623F /* InExtensions.swift */,
+				FD3D3CB128BF5733008DDA51 /* ColorExtensions.swift */,
+				FD33D48D28D8694D009B373E /* UIColorExtensions.swift */,
+				FD8A2FAA28E1AE690089E047 /* DoubleExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -178,13 +229,24 @@
 			isa = PBXGroup;
 			children = (
 				FD3D3CAF28BF54AA008DDA51 /* MixerCellEntity.swift */,
+				FD1CB33728D47D9700B1CCCD /* EffectCellEntity.swift */,
+				FD33D48F28D869AF009B373E /* EffectsPopUpCellEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		FD6075E228DC55C900C96134 /* temp */ = {
+			isa = PBXGroup;
+			children = (
+				FD6075E328DC55DA00C96134 /* CustomModalViewController.swift */,
+			);
+			path = temp;
 			sourceTree = "<group>";
 		};
 		FDFB154E28D323B300F42B0A /* BottomView */ = {
 			isa = PBXGroup;
 			children = (
+				FD1CB33428D47D6900B1CCCD /* EffectsView */,
 				FDFB154F28D323CF00F42B0A /* StudioBottomView.swift */,
 			);
 			path = BottomView;
@@ -260,19 +322,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD33D49028D869AF009B373E /* EffectsPopUpCellEntity.swift in Sources */,
+				FD6075E628DDB47300C96134 /* EffectsPopUpType.swift in Sources */,
 				FDFB155028D323CF00F42B0A /* StudioBottomView.swift in Sources */,
 				FD3D3CA628BF4D10008DDA51 /* AppDelegate.swift in Sources */,
+				FD1CB33628D47D8300B1CCCD /* EffectCell.swift in Sources */,
 				FD3D3CAD28BF53E6008DDA51 /* ViewExtensions.swift in Sources */,
 				FD2609E528C5BA1100CE623F /* InExtensions.swift in Sources */,
-				FD3D3CA328BF4BA3008DDA51 /* StudioViewController.swift in Sources */,
+				FD1CB33828D47D9700B1CCCD /* EffectCellEntity.swift in Sources */,
+				FD6075E428DC55DA00C96134 /* CustomModalViewController.swift in Sources */,
+				FD33D48E28D8694D009B373E /* UIColorExtensions.swift in Sources */,
+				FD3D3CA328BF4BA3008DDA51 /* StudioMainViewController.swift in Sources */,
+				FD1CB33A28D47FA000B1CCCD /* EffectsView.swift in Sources */,
 				FD3D3CB228BF5733008DDA51 /* ColorExtensions.swift in Sources */,
 				FD1267C228B7654E008EC465 /* StudioConstants.swift in Sources */,
 				FD3D3CAA28BF4FC2008DDA51 /* MixerCell.swift in Sources */,
 				FD0FCAE028C89E66005303BD /* RulerView.swift in Sources */,
-				FD1267BF28B632D3008EC465 /* StudioView.swift in Sources */,
+				FD8A2FAB28E1AE690089E047 /* DoubleExtension.swift in Sources */,
+				FD1267BF28B632D3008EC465 /* StudioMainView.swift in Sources */,
+				FD33D48428D865ED009B373E /* EffectsPopUpView.swift in Sources */,
 				FD3D3CB028BF54AA008DDA51 /* MixerCellEntity.swift in Sources */,
 				FD0FCADD28C893F4005303BD /* AppSlider.swift in Sources */,
 				FD1267BE28B632D3008EC465 /* AudioWaveView.swift in Sources */,
+				FD33D48728D8665F009B373E /* EffectsPopUpCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +481,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -438,6 +511,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

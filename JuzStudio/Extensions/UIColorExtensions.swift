@@ -1,24 +1,20 @@
 //
-//  ColorExtensions.swift
+//  UIColorExtensions.swift
 //  JuzStudio
 //
-//  Created by Ilyas Shomat on 31.08.2022.
+//  Created by Ilyas Shomat on 19.09.2022.
 //
 
 import Foundation
-import SwiftUI
+import UIKit
 
-extension Color {
-    static let appPurple: Color = Color(hex: "#8A54FF")
-    static let appLightBlue: Color = Color(hex: "#00BFFF")
-    static let appWhiteWithOpacity: Color = .white.opacity(0.12)
-    static let appDarkPurple: Color = Color(hex: "##706A95")
-    static let appLightGreen: Color = Color(hex: "#10C197")
-    static let appdarkBackground: Color = Color(hex: "#020517")
+extension UIColor {
+    static let appPurple: UIColor = UIColor(hex: "#8A54FF")
+    static let appdarkBackground: UIColor = UIColor(hex: "#020517")
 }
 
-extension Color {
-    init(hex: String) {
+extension UIColor {
+    convenience init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int: UInt64 = 0
         Scanner(string: hex).scanHexInt64(&int)
@@ -35,11 +31,10 @@ extension Color {
         }
 
         self.init(
-            .sRGB,
             red: Double(r) / 255,
             green: Double(g) / 255,
             blue:  Double(b) / 255,
-            opacity: Double(a) / 255
+            alpha: Double(a) / 255
         )
     }
 }
