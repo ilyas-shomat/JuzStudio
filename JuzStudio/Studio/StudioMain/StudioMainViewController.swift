@@ -55,9 +55,9 @@ final class StudioMainViewController: UIViewController, ObservableObject {
             .init(name: "Low cut", value: -12, minVal: -12, maxVal: 0)
         ],
         .eq: [
-            .init(name: "Low", value: 0, minVal: 8, maxVal: 8),
-            .init(name: "Mid", value: 0, minVal: 8, maxVal: 8),
-            .init(name: "High", value: 0, minVal: 8, maxVal: 8)
+            .init(name: "Low", value: 0, minVal: 0, maxVal: 8),
+            .init(name: "Mid", value: 0, minVal: 0, maxVal: 8),
+            .init(name: "High", value: 0, minVal: 0, maxVal: 8)
         ],
         .compressor: [
             .init(name: "Input", value: -24, minVal: -24, maxVal: 24),
@@ -161,6 +161,16 @@ final class StudioMainViewController: UIViewController, ObservableObject {
     func swipedDownEffectsPopUp() {
         withAnimation {
             isEffectsSlidingOptionOpened = false
+        }
+    }
+    
+    func swipedDownEffectsPopUp(type: EffectsPopUpType) {
+        withAnimation {
+            isEffectsSlidingOptionOpened = false
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                self?.effectTypeSelected(type: type)
+            }
         }
     }
 }

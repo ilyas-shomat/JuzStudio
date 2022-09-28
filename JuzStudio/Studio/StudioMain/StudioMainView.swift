@@ -42,7 +42,7 @@ struct StudioMainView: View {
                         swipedToPop: viewController.swipedDownEffectsPopUp,
                         playButtonTapped: viewController.playTapped,
                         restartButtonTapped: viewController.restartTapped,
-                        effectsButtonTap: viewController.effectTypeSelected
+                        effectsButtonTap: viewController.swipedDownEffectsPopUp
                     )
                 }
                 .transition(.move(edge: .bottom))
