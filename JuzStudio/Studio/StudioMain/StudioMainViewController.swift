@@ -11,6 +11,8 @@ import SwiftUI
 import Combine
 
 final class StudioMainViewController: UIViewController, ObservableObject {
+    var viewModel: StudioMainViewModelDelegate?
+    
     var bits: [CGFloat] = testBits1
     var cancellable: Cancellable?
     
@@ -172,6 +174,22 @@ final class StudioMainViewController: UIViewController, ObservableObject {
                 self?.effectTypeSelected(type: type)
             }
         }
+    }
+}
+
+extension StudioMainViewController: StudioMainViewControllerDelegate {
+    
+}
+
+extension StudioMainViewController {
+    class func getInstance() -> StudioMainViewController {
+        let viewController = StudioMainViewController()
+        let viewModel = StudioMainViewModel()
+        
+        viewController.viewModel = viewModel
+        viewModel.viewController = viewController
+        
+        return viewController
     }
 }
 

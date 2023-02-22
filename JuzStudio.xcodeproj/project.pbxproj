@@ -31,6 +31,16 @@
 		FD6075E628DDB47300C96134 /* EffectsPopUpType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6075E528DDB47300C96134 /* EffectsPopUpType.swift */; };
 		FD8A2FAB28E1AE690089E047 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8A2FAA28E1AE690089E047 /* DoubleExtension.swift */; };
 		FD8A2FAE28E1BBC90089E047 /* LyricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8A2FAD28E1BBC90089E047 /* LyricsView.swift */; };
+		FD9FC6EE29A620B800F3AC2B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9FC6EC29A620B800F3AC2B /* AudioToolbox.framework */; };
+		FD9FC6EF29A620B800F3AC2B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9FC6ED29A620B800F3AC2B /* CoreAudio.framework */; };
+		FD9FC6F129A620C000F3AC2B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9FC6F029A620C000F3AC2B /* AVFoundation.framework */; };
+		FD9FC6F729A6220E00F3AC2B /* lycka.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD9FC6F529A6220D00F3AC2B /* lycka.mp3 */; };
+		FD9FC6F829A6220E00F3AC2B /* nuyorica.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FD9FC6F629A6220D00F3AC2B /* nuyorica.m4a */; };
+		FD9FC6FC29A6224300F3AC2B /* SuperpoweredIOSAudioIO.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD9FC6FB29A6224200F3AC2B /* SuperpoweredIOSAudioIO.mm */; };
+		FD9FC6FF29A6240500F3AC2B /* SuperpoweredService.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9FC6FE29A6240500F3AC2B /* SuperpoweredService.m */; };
+		FD9FC70229A6263E00F3AC2B /* StudioMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FC70129A6263E00F3AC2B /* StudioMainViewModel.swift */; };
+		FD9FC70529A6265200F3AC2B /* StudioMainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FC70429A6265200F3AC2B /* StudioMainProtocols.swift */; };
+		FD9FC70729A631C200F3AC2B /* libSuperpoweredAudio.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9FC70629A631C200F3AC2B /* libSuperpoweredAudio.xcframework */; };
 		FDFB155028D323CF00F42B0A /* StudioBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB154F28D323CF00F42B0A /* StudioBottomView.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +70,19 @@
 		FD6075E528DDB47300C96134 /* EffectsPopUpType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsPopUpType.swift; sourceTree = "<group>"; };
 		FD8A2FAA28E1AE690089E047 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		FD8A2FAD28E1BBC90089E047 /* LyricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsView.swift; sourceTree = "<group>"; };
+		FD9FC6EC29A620B800F3AC2B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FD9FC6ED29A620B800F3AC2B /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		FD9FC6F029A620C000F3AC2B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FD9FC6F529A6220D00F3AC2B /* lycka.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lycka.mp3; sourceTree = "<group>"; };
+		FD9FC6F629A6220D00F3AC2B /* nuyorica.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = nuyorica.m4a; sourceTree = "<group>"; };
+		FD9FC6F929A6224200F3AC2B /* SuperpoweredService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperpoweredService.h; sourceTree = "<group>"; };
+		FD9FC6FA29A6224200F3AC2B /* SuperpoweredIOSAudioIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperpoweredIOSAudioIO.h; sourceTree = "<group>"; };
+		FD9FC6FB29A6224200F3AC2B /* SuperpoweredIOSAudioIO.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SuperpoweredIOSAudioIO.mm; sourceTree = "<group>"; };
+		FD9FC6FD29A622CA00F3AC2B /* Superpowered.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Superpowered.h; sourceTree = "<group>"; };
+		FD9FC6FE29A6240500F3AC2B /* SuperpoweredService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperpoweredService.m; sourceTree = "<group>"; };
+		FD9FC70129A6263E00F3AC2B /* StudioMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioMainViewModel.swift; sourceTree = "<group>"; };
+		FD9FC70429A6265200F3AC2B /* StudioMainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioMainProtocols.swift; sourceTree = "<group>"; };
+		FD9FC70629A631C200F3AC2B /* libSuperpoweredAudio.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libSuperpoweredAudio.xcframework; sourceTree = "<group>"; };
 		FDFB154F28D323CF00F42B0A /* StudioBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioBottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +91,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD9FC6EF29A620B800F3AC2B /* CoreAudio.framework in Frameworks */,
+				FD9FC6EE29A620B800F3AC2B /* AudioToolbox.framework in Frameworks */,
+				FD9FC70729A631C200F3AC2B /* libSuperpoweredAudio.xcframework in Frameworks */,
+				FD9FC6F129A620C000F3AC2B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				FD1267AC28B6327F008EC465 /* JuzStudio */,
+				FD9FC6F229A620E100F3AC2B /* Superpowered */,
 				FD1267AB28B6327F008EC465 /* Products */,
+				FD9FC6EB29A620B700F3AC2B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +138,7 @@
 		FD1267AC28B6327F008EC465 /* JuzStudio */ = {
 			isa = PBXGroup;
 			children = (
+				FD9FC70829A63A8F00F3AC2B /* Bridging */,
 				FD3D3CA428BF4D03008DDA51 /* Application */,
 				FD3D3CAE28BF5482008DDA51 /* Entities */,
 				FD3D3CAB28BF53D3008DDA51 /* Extensions */,
@@ -161,6 +191,8 @@
 				FD3D3CA028BF4B68008DDA51 /* Components */,
 				FD1267BD28B632D3008EC465 /* StudioMainView.swift */,
 				FD3D3CA228BF4BA3008DDA51 /* StudioMainViewController.swift */,
+				FD9FC70129A6263E00F3AC2B /* StudioMainViewModel.swift */,
+				FD9FC70429A6265200F3AC2B /* StudioMainProtocols.swift */,
 			);
 			path = StudioMain;
 			sourceTree = "<group>";
@@ -241,9 +273,41 @@
 			path = LyricsView;
 			sourceTree = "<group>";
 		};
+		FD9FC6EB29A620B700F3AC2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD9FC6F029A620C000F3AC2B /* AVFoundation.framework */,
+				FD9FC6EC29A620B800F3AC2B /* AudioToolbox.framework */,
+				FD9FC6ED29A620B800F3AC2B /* CoreAudio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD9FC6F229A620E100F3AC2B /* Superpowered */ = {
+			isa = PBXGroup;
+			children = (
+				FD9FC70629A631C200F3AC2B /* libSuperpoweredAudio.xcframework */,
+				FD9FC6FD29A622CA00F3AC2B /* Superpowered.h */,
+				FD9FC6FA29A6224200F3AC2B /* SuperpoweredIOSAudioIO.h */,
+				FD9FC6FB29A6224200F3AC2B /* SuperpoweredIOSAudioIO.mm */,
+			);
+			path = Superpowered;
+			sourceTree = "<group>";
+		};
+		FD9FC70829A63A8F00F3AC2B /* Bridging */ = {
+			isa = PBXGroup;
+			children = (
+				FD9FC6F929A6224200F3AC2B /* SuperpoweredService.h */,
+				FD9FC6FE29A6240500F3AC2B /* SuperpoweredService.m */,
+			);
+			path = Bridging;
+			sourceTree = "<group>";
+		};
 		FDE3038C29A3557B0057EFA8 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				FD9FC6F529A6220D00F3AC2B /* lycka.mp3 */,
+				FD9FC6F629A6220D00F3AC2B /* nuyorica.m4a */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -290,6 +354,7 @@
 				TargetAttributes = {
 					FD1267A928B6327F008EC465 = {
 						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -317,6 +382,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD1267B528B63281008EC465 /* Preview Assets.xcassets in Resources */,
+				FD9FC6F729A6220E00F3AC2B /* lycka.mp3 in Resources */,
+				FD9FC6F829A6220E00F3AC2B /* nuyorica.m4a in Resources */,
 				FD1267B228B63281008EC465 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,9 +414,13 @@
 				FD8A2FAB28E1AE690089E047 /* DoubleExtension.swift in Sources */,
 				FD1267BF28B632D3008EC465 /* StudioMainView.swift in Sources */,
 				FD33D48428D865ED009B373E /* EffectsPopUpView.swift in Sources */,
+				FD9FC70529A6265200F3AC2B /* StudioMainProtocols.swift in Sources */,
+				FD9FC6FC29A6224300F3AC2B /* SuperpoweredIOSAudioIO.mm in Sources */,
 				FD3D3CB028BF54AA008DDA51 /* MixerCellEntity.swift in Sources */,
 				FD0FCADD28C893F4005303BD /* AppSlider.swift in Sources */,
 				FD1267BE28B632D3008EC465 /* AudioWaveView.swift in Sources */,
+				FD9FC70229A6263E00F3AC2B /* StudioMainViewModel.swift in Sources */,
+				FD9FC6FF29A6240500F3AC2B /* SuperpoweredService.m in Sources */,
 				FD33D48728D8665F009B373E /* EffectsPopUpCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,11 +547,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"JuzStudio/Preview Content\"";
 				DEVELOPMENT_TEAM = PB2762M9G4;
 				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -495,6 +570,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = biz.galamat.qos.app.JuzStudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = JuzStudio/Bridging/SuperpoweredService.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -505,11 +582,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"JuzStudio/Preview Content\"";
 				DEVELOPMENT_TEAM = PB2762M9G4;
 				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -524,6 +605,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = biz.galamat.qos.app.JuzStudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = JuzStudio/Bridging/SuperpoweredService.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
