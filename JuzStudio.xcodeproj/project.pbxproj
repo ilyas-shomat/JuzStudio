@@ -28,7 +28,6 @@
 		FD3D3CAD28BF53E6008DDA51 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CAC28BF53E6008DDA51 /* ViewExtensions.swift */; };
 		FD3D3CB028BF54AA008DDA51 /* MixerCellEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CAF28BF54AA008DDA51 /* MixerCellEntity.swift */; };
 		FD3D3CB228BF5733008DDA51 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3D3CB128BF5733008DDA51 /* ColorExtensions.swift */; };
-		FD6075E428DC55DA00C96134 /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6075E328DC55DA00C96134 /* CustomModalViewController.swift */; };
 		FD6075E628DDB47300C96134 /* EffectsPopUpType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6075E528DDB47300C96134 /* EffectsPopUpType.swift */; };
 		FD8A2FAB28E1AE690089E047 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8A2FAA28E1AE690089E047 /* DoubleExtension.swift */; };
 		FD8A2FAE28E1BBC90089E047 /* LyricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8A2FAD28E1BBC90089E047 /* LyricsView.swift */; };
@@ -48,7 +47,6 @@
 		FD1CB33728D47D9700B1CCCD /* EffectCellEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectCellEntity.swift; sourceTree = "<group>"; };
 		FD1CB33928D47FA000B1CCCD /* EffectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsView.swift; sourceTree = "<group>"; };
 		FD2609E428C5BA1100CE623F /* InExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InExtensions.swift; sourceTree = "<group>"; };
-		FD2609E628C5BC4700CE623F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FD33D48328D865ED009B373E /* EffectsPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsPopUpView.swift; sourceTree = "<group>"; };
 		FD33D48628D8665F009B373E /* EffectsPopUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsPopUpCell.swift; sourceTree = "<group>"; };
 		FD33D48D28D8694D009B373E /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 		FD3D3CAC28BF53E6008DDA51 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		FD3D3CAF28BF54AA008DDA51 /* MixerCellEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerCellEntity.swift; sourceTree = "<group>"; };
 		FD3D3CB128BF5733008DDA51 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
-		FD6075E328DC55DA00C96134 /* CustomModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
 		FD6075E528DDB47300C96134 /* EffectsPopUpType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsPopUpType.swift; sourceTree = "<group>"; };
 		FD8A2FAA28E1AE690089E047 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		FD8A2FAD28E1BBC90089E047 /* LyricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsView.swift; sourceTree = "<group>"; };
@@ -112,14 +109,13 @@
 		FD1267AC28B6327F008EC465 /* JuzStudio */ = {
 			isa = PBXGroup;
 			children = (
-				FD6075E228DC55C900C96134 /* temp */,
-				FD2609E628C5BC4700CE623F /* Info.plist */,
 				FD3D3CA428BF4D03008DDA51 /* Application */,
 				FD3D3CAE28BF5482008DDA51 /* Entities */,
 				FD3D3CAB28BF53D3008DDA51 /* Extensions */,
 				FD1267C028B7653E008EC465 /* Common */,
 				FD0FCADB28C893C1005303BD /* CustomViews */,
 				FD1267BB28B632C9008EC465 /* Studio */,
+				FDE3038C29A3557B0057EFA8 /* SupportingFiles */,
 				FD1267B128B63281008EC465 /* Assets.xcassets */,
 				FD1267B328B63281008EC465 /* Preview Content */,
 			);
@@ -237,20 +233,19 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		FD6075E228DC55C900C96134 /* temp */ = {
-			isa = PBXGroup;
-			children = (
-				FD6075E328DC55DA00C96134 /* CustomModalViewController.swift */,
-			);
-			path = temp;
-			sourceTree = "<group>";
-		};
 		FD8A2FAC28E1BBAB0089E047 /* LyricsView */ = {
 			isa = PBXGroup;
 			children = (
 				FD8A2FAD28E1BBC90089E047 /* LyricsView.swift */,
 			);
 			path = LyricsView;
+			sourceTree = "<group>";
+		};
+		FDE3038C29A3557B0057EFA8 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		FDFB154E28D323B300F42B0A /* BottomView */ = {
@@ -342,7 +337,6 @@
 				FD3D3CAD28BF53E6008DDA51 /* ViewExtensions.swift in Sources */,
 				FD2609E528C5BA1100CE623F /* InExtensions.swift in Sources */,
 				FD1CB33828D47D9700B1CCCD /* EffectCellEntity.swift in Sources */,
-				FD6075E428DC55DA00C96134 /* CustomModalViewController.swift in Sources */,
 				FD33D48E28D8694D009B373E /* UIColorExtensions.swift in Sources */,
 				FD3D3CA328BF4BA3008DDA51 /* StudioMainViewController.swift in Sources */,
 				FD1CB33A28D47FA000B1CCCD /* EffectsView.swift in Sources */,
@@ -488,7 +482,6 @@
 				DEVELOPMENT_TEAM = PB2762M9G4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JuzStudio/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -518,7 +511,6 @@
 				DEVELOPMENT_TEAM = PB2762M9G4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JuzStudio/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
