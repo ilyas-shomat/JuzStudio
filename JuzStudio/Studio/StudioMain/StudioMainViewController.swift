@@ -39,6 +39,12 @@ final class StudioMainViewController: UIViewController, ObservableObject {
     @Published var isEffectsSlidingOptionOpened: Bool = false
     @Published var currentEffectType: EffectsPopUpType = .delay
     
+    @Published var isPlaying: Bool = false {
+        didSet {
+//            stopTimer()
+        }
+    }
+    
     @Published var typeDict: [EffectsPopUpType: [EffectsPopUpCellEntity]] = [
         .delay: [
             .init(name: "Dry level", value: 0, minVal: 0, maxVal: 1),
@@ -140,7 +146,9 @@ final class StudioMainViewController: UIViewController, ObservableObject {
 
     }
     
-    func playTapped() {
+    func playPauseTapped() {
+        isPlaying.toggle()
+        viewModel?.onPlayPause()
         startTimer()
     }
     
@@ -184,10 +192,17 @@ extension StudioMainViewController: StudioMainViewControllerDelegate {
 extension StudioMainViewController {
     class func getInstance() -> StudioMainViewController {
         let viewController = StudioMainViewController()
-        let viewModel = StudioMainViewModel()
         
-        viewController.viewModel = viewModel
-        viewModel.viewController = viewController
+        let superpoweredService = SuperpoweredService(key: AppConstants.superpoweredKey)
+        
+        if let superpoweredService = superpoweredService {
+            let viewModel = StudioMainViewModel(superpoweredService: superpoweredService)
+            viewController.viewModel = viewModel
+            viewModel.viewController = viewController
+        }
+        else {
+            assertionFailure("ERROR, SuperpoweredService not initialized")
+        }
         
         return viewController
     }

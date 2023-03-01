@@ -41,6 +41,12 @@
 		FD9FC70229A6263E00F3AC2B /* StudioMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FC70129A6263E00F3AC2B /* StudioMainViewModel.swift */; };
 		FD9FC70529A6265200F3AC2B /* StudioMainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FC70429A6265200F3AC2B /* StudioMainProtocols.swift */; };
 		FD9FC70729A631C200F3AC2B /* libSuperpoweredAudio.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9FC70629A631C200F3AC2B /* libSuperpoweredAudio.xcframework */; };
+		FD9FC70A29A63CCC00F3AC2B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FC70929A63CCC00F3AC2B /* AppConstants.swift */; };
+		FDD0245E29ACCD220012F154 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD0245D29ACCD220012F154 /* CoreMedia.framework */; };
+		FDD0246029ACCD2A0012F154 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD0245F29ACCD2A0012F154 /* MediaPlayer.framework */; };
+		FDD0246229ACCD360012F154 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD0246129ACCD360012F154 /* Foundation.framework */; };
+		FDD0246429ACCD3F0012F154 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD0246329ACCD3F0012F154 /* CoreGraphics.framework */; };
+		FDD0246629ACD68A0012F154 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD0246529ACD68A0012F154 /* UIKit.framework */; };
 		FDFB155028D323CF00F42B0A /* StudioBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB154F28D323CF00F42B0A /* StudioBottomView.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +89,15 @@
 		FD9FC70129A6263E00F3AC2B /* StudioMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioMainViewModel.swift; sourceTree = "<group>"; };
 		FD9FC70429A6265200F3AC2B /* StudioMainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioMainProtocols.swift; sourceTree = "<group>"; };
 		FD9FC70629A631C200F3AC2B /* libSuperpoweredAudio.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libSuperpoweredAudio.xcframework; sourceTree = "<group>"; };
+		FD9FC70929A63CCC00F3AC2B /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		FDD0245929ACAEE20012F154 /* SuperpoweredAdvancedAudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperpoweredAdvancedAudioPlayer.h; sourceTree = "<group>"; };
+		FDD0245A29ACB19D0012F154 /* SuperpoweredDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperpoweredDecoder.h; sourceTree = "<group>"; };
+		FDD0245B29ACB1B60012F154 /* SuperpoweredHTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperpoweredHTTP.h; sourceTree = "<group>"; };
+		FDD0245D29ACCD220012F154 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		FDD0245F29ACCD2A0012F154 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		FDD0246129ACCD360012F154 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FDD0246329ACCD3F0012F154 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FDD0246529ACD68A0012F154 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FDFB154F28D323CF00F42B0A /* StudioBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioBottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,9 +107,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD9FC6EF29A620B800F3AC2B /* CoreAudio.framework in Frameworks */,
+				FDD0246629ACD68A0012F154 /* UIKit.framework in Frameworks */,
 				FD9FC6EE29A620B800F3AC2B /* AudioToolbox.framework in Frameworks */,
 				FD9FC70729A631C200F3AC2B /* libSuperpoweredAudio.xcframework in Frameworks */,
 				FD9FC6F129A620C000F3AC2B /* AVFoundation.framework in Frameworks */,
+				FDD0246429ACCD3F0012F154 /* CoreGraphics.framework in Frameworks */,
+				FDD0246029ACCD2A0012F154 /* MediaPlayer.framework in Frameworks */,
+				FDD0246229ACCD360012F154 /* Foundation.framework in Frameworks */,
+				FDD0245E29ACCD220012F154 /* CoreMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +166,6 @@
 				FD0FCADB28C893C1005303BD /* CustomViews */,
 				FD1267BB28B632C9008EC465 /* Studio */,
 				FDE3038C29A3557B0057EFA8 /* SupportingFiles */,
-				FD1267B128B63281008EC465 /* Assets.xcassets */,
 				FD1267B328B63281008EC465 /* Preview Content */,
 			);
 			path = JuzStudio;
@@ -172,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				FD1267C128B7654E008EC465 /* StudioConstants.swift */,
+				FD9FC70929A63CCC00F3AC2B /* AppConstants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -276,6 +296,11 @@
 		FD9FC6EB29A620B700F3AC2B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FDD0246529ACD68A0012F154 /* UIKit.framework */,
+				FDD0246329ACCD3F0012F154 /* CoreGraphics.framework */,
+				FDD0246129ACCD360012F154 /* Foundation.framework */,
+				FDD0245F29ACCD2A0012F154 /* MediaPlayer.framework */,
+				FDD0245D29ACCD220012F154 /* CoreMedia.framework */,
 				FD9FC6F029A620C000F3AC2B /* AVFoundation.framework */,
 				FD9FC6EC29A620B800F3AC2B /* AudioToolbox.framework */,
 				FD9FC6ED29A620B800F3AC2B /* CoreAudio.framework */,
@@ -287,9 +312,12 @@
 			isa = PBXGroup;
 			children = (
 				FD9FC70629A631C200F3AC2B /* libSuperpoweredAudio.xcframework */,
+				FDD0245C29ACB1C40012F154 /* Implementations */,
 				FD9FC6FD29A622CA00F3AC2B /* Superpowered.h */,
+				FDD0245B29ACB1B60012F154 /* SuperpoweredHTTP.h */,
+				FDD0245A29ACB19D0012F154 /* SuperpoweredDecoder.h */,
 				FD9FC6FA29A6224200F3AC2B /* SuperpoweredIOSAudioIO.h */,
-				FD9FC6FB29A6224200F3AC2B /* SuperpoweredIOSAudioIO.mm */,
+				FDD0245929ACAEE20012F154 /* SuperpoweredAdvancedAudioPlayer.h */,
 			);
 			path = Superpowered;
 			sourceTree = "<group>";
@@ -303,9 +331,18 @@
 			path = Bridging;
 			sourceTree = "<group>";
 		};
+		FDD0245C29ACB1C40012F154 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				FD9FC6FB29A6224200F3AC2B /* SuperpoweredIOSAudioIO.mm */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
 		FDE3038C29A3557B0057EFA8 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				FD1267B128B63281008EC465 /* Assets.xcassets */,
 				FD9FC6F529A6220D00F3AC2B /* lycka.mp3 */,
 				FD9FC6F629A6220D00F3AC2B /* nuyorica.m4a */,
 			);
@@ -406,6 +443,7 @@
 				FD1CB33828D47D9700B1CCCD /* EffectCellEntity.swift in Sources */,
 				FD33D48E28D8694D009B373E /* UIColorExtensions.swift in Sources */,
 				FD3D3CA328BF4BA3008DDA51 /* StudioMainViewController.swift in Sources */,
+				FD9FC70A29A63CCC00F3AC2B /* AppConstants.swift in Sources */,
 				FD1CB33A28D47FA000B1CCCD /* EffectsView.swift in Sources */,
 				FD3D3CB228BF5733008DDA51 /* ColorExtensions.swift in Sources */,
 				FD1267C228B7654E008EC465 /* StudioConstants.swift in Sources */,

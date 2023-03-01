@@ -40,7 +40,7 @@ struct StudioMainView: View {
                         type: $viewController.currentEffectType,
                         typeDict: $viewController.typeDict,
                         swipedToPop: viewController.swipedDownEffectsPopUp,
-                        playButtonTapped: viewController.playTapped,
+                        playButtonTapped: viewController.playPauseTapped,
                         restartButtonTapped: viewController.restartTapped,
                         effectsButtonTap: viewController.swipedDownEffectsPopUp
                     )
@@ -54,8 +54,8 @@ struct StudioMainView: View {
     
     private var headerView: some View {
         HStack {
-            Image("backButtonviewController")
-                .padding(.bottom, 30)
+//            Image("backButtonviewController")
+//                .padding(.bottom, 30)
             
             Spacer()
             VStack {
@@ -76,9 +76,9 @@ struct StudioMainView: View {
             }
             Spacer()
             
-            Text("Next")
-                .foregroundColor(.appPurple)
-                .padding(.bottom, 30)
+//            Text("Next")
+//                .foregroundColor(.appPurple)
+//                .padding(.bottom, 30)
 
         }
         .padding(.horizontal, 20)
@@ -140,7 +140,7 @@ struct StudioMainView: View {
                                     bits: viewController.bits,
                                     waveColor: viewController.mixerCellColors[index],
                                     reader: reader,
-                                    waveTapped: viewController.stopTimer
+                                    waveTapped: {}
                                 )
                             }
                             
@@ -167,11 +167,12 @@ struct StudioMainView: View {
     private var bottomView: some View {
         StudioBottomView(
             isMagicSelected: $viewController.isMagicSelected,
+            isPlaying: $viewController.isPlaying,
             bottomOption: $viewController.selectedBottomOption,
             effectCellEntities: viewController.effectsCellEntities,
             mixerButtonTapped: viewController.mixerTapped,
             recordButtonTapped: viewController.recordTapped,
-            playButtonTapped: viewController.playTapped,
+            playButtonTapped: viewController.playPauseTapped,
             restartButtonTapped: viewController.restartTapped,
             effectsButtonTap: viewController.effectTypeSelected
         )

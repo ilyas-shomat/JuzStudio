@@ -6,5 +6,10 @@
 #import <Foundation/Foundation.h>
 
 @interface SuperpoweredService: NSObject
-- (void)tempFunc;
+
+- (instancetype)initWithKey:(NSString *)key;
+- (void)setupMainPlayer;
+- (void)onPlayPause;
+- (void)getFrequencies:(float *)frequencies;
+
 @end

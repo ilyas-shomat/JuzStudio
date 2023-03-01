@@ -9,16 +9,15 @@ import Foundation
 
 final class StudioMainViewModel: StudioMainViewModelDelegate {
     var viewController: StudioMainViewControllerDelegate?
-    var superpoweredService: SuperpoweredService!
+    private let superpoweredService: SuperpoweredService
     
-    init() {
-        print("/// StudioMainViewModel")
+    init(superpoweredService: SuperpoweredService) {
+        self.superpoweredService = superpoweredService
         
-        superpoweredService = SuperpoweredService()
-        
-//        superPowered.tempFunc()
-        superpoweredService.tempFunc()
+        superpoweredService.setupMainPlayer()
+    }
+    
+    func onPlayPause() {
+        superpoweredService.onPlayPause()
     }
 }
-
-// JuzStudio-Bridging-Header

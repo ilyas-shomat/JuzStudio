@@ -13,4 +13,6 @@ protocol StudioMainViewControllerDelegate {
 
 protocol StudioMainViewModelDelegate {
     var viewController: StudioMainViewControllerDelegate? { get set }
+    
+    func onPlayPause()
 }
