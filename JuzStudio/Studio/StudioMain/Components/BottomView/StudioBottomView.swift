@@ -16,6 +16,7 @@ enum StudioBottomViewSelectedOption {
 
 struct StudioBottomView: View {
     @Binding private var isMagicSelected: Bool
+    @Binding private var isPlaying: Bool
     @Binding private var bottomOption: StudioBottomViewSelectedOption
     
     private var effectCellEntities: [EffectCellEntity]
@@ -28,6 +29,7 @@ struct StudioBottomView: View {
     
     init(
         isMagicSelected: Binding<Bool>,
+        isPlaying: Binding<Bool>,
         bottomOption: Binding<StudioBottomViewSelectedOption>,
         effectCellEntities: [EffectCellEntity],
         mixerButtonTapped: @escaping () -> Void,
@@ -37,6 +39,7 @@ struct StudioBottomView: View {
         effectsButtonTap: @escaping (EffectsPopUpType) -> Void
     ) {
         _isMagicSelected = isMagicSelected
+        _isPlaying = isPlaying
         _bottomOption = bottomOption
         
         self.effectCellEntities = effectCellEntities
@@ -122,7 +125,7 @@ struct StudioBottomView: View {
     
     private var playButton: some View {
         Button(action: playButtonTapped) {
-            Image("play")
+            Image(isPlaying ? "pause" : "play")
         }
     }
     

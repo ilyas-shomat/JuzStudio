@@ -11,7 +11,9 @@ import SwiftUI
 import Combine
 
 final class StudioMainViewController: UIViewController, ObservableObject {
-    var bits: [CGFloat] = testBits1
+    var viewModel: StudioMainViewModelDelegate?
+    
+    @Published var mainAudioAmplitudes: [CGFloat] = .init()
     var cancellable: Cancellable?
     
     let mixerCellColors: [Color] = [.appPurple, .appLightBlue, .appLightGreen]
@@ -19,7 +21,7 @@ final class StudioMainViewController: UIViewController, ObservableObject {
     @Published var mixerCellEntities: [MixerCellEntity] = [
         .init(type: .music, desc1: "Beat’s Name", desc2: "Beat’s Key"),
 //        .init(type:  .voice, desc1: "Голос"),
-        .init(type: .voice, desc1: "Голос"),
+//        .init(type: .voice, desc1: "Голос"),
         .init(type: .empty, desc1: "Добавить дорожку"),
     ]
     
@@ -36,6 +38,12 @@ final class StudioMainViewController: UIViewController, ObservableObject {
     @Published var selectedBottomOption: StudioBottomViewSelectedOption = .effects
     @Published var isEffectsSlidingOptionOpened: Bool = false
     @Published var currentEffectType: EffectsPopUpType = .delay
+    
+    @Published var isPlaying: Bool = false {
+        didSet {
+//            stopTimer()
+        }
+    }
     
     @Published var typeDict: [EffectsPopUpType: [EffectsPopUpCellEntity]] = [
         .delay: [
@@ -138,7 +146,9 @@ final class StudioMainViewController: UIViewController, ObservableObject {
 
     }
     
-    func playTapped() {
+    func playPauseTapped() {
+        isPlaying.toggle()
+        viewModel?.onPlayPause()
         startTimer()
     }
     
@@ -174,6 +184,44 @@ final class StudioMainViewController: UIViewController, ObservableObject {
         }
     }
 }
+
+extension StudioMainViewController: StudioMainViewControllerDelegate {
+    func setFirstAmplitudes(_ amplitudes: [Float]) {
+        mainAudioAmplitudes = amplitudes.map { CGFloat($0) }
+    }
+    
+    func mainAudioPlayingFinished() {
+        DispatchQueue.main.async { [weak self] in
+            self?.isPlaying = false
+        }
+    }
+}
+
+extension StudioMainViewController {
+    class func getInstance() -> StudioMainViewController {
+        let viewController = StudioMainViewController()
+        
+        let superpoweredService = SuperpoweredService(key: AppConstants.superpoweredKey)
+        
+        if let superpoweredService = superpoweredService {
+            let viewModel = StudioMainViewModel(
+                audioFileUrl: heroicAudioPath,
+                superpoweredService: superpoweredService
+            )
+            viewController.viewModel = viewModel
+            viewModel.viewController = viewController
+        }
+        else {
+            assertionFailure("ERROR, SuperpoweredService not initialized")
+        }
+        
+        return viewController
+    }
+}
+
+var lyckaAudioPath: String = "/Users/ilyasshomat/Desktop/code/swift/projects/JuzStudio/JuzStudio/SupportingFiles/lycka.mp3"
+
+var heroicAudioPath: String = "/Users/ilyasshomat/Desktop/code/swift/projects/JuzStudio/JuzStudio/SupportingFiles/heroic.mp3"
 
 // MARK: Testing values
 
