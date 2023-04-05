@@ -126,7 +126,7 @@ struct StudioMainView: View {
                     HStack {
                         RulerView(
                             incrementor:  $viewController.incrementor,
-                            bits: viewController.bits,
+                            bits: viewController.mainAudioAmplitudes,
                             reader: reader
                         )
                         Spacer()
@@ -137,7 +137,7 @@ struct StudioMainView: View {
                             if viewController.mixerCellEntities[index].type != .empty {
                                 AudioWaveView(
                                     incrementor: $viewController.incrementor,
-                                    bits: viewController.bits,
+                                    bits: viewController.mainAudioAmplitudes,
                                     waveColor: viewController.mixerCellColors[index],
                                     reader: reader,
                                     waveTapped: {}

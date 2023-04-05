@@ -7,9 +7,10 @@
 
 @interface SuperpoweredService: NSObject
 
+@property (nonatomic, copy) void (^audioCompletion)(void);
+
 - (instancetype)initWithKey:(NSString *)key;
-- (void)setupMainPlayer;
+- (void)setupMainPlayerWithPath:(NSString *)path;
 - (void)onPlayPause;
-- (void)getFrequencies:(float *)frequencies;
 
 @end

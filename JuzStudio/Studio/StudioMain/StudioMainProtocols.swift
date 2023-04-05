@@ -9,6 +9,9 @@ import Foundation
 
 protocol StudioMainViewControllerDelegate {
     var viewModel: StudioMainViewModelDelegate? { get set }
+    
+    func setFirstAmplitudes(_ amplitudes: [Float])
+    func mainAudioPlayingFinished()
 }
 
 protocol StudioMainViewModelDelegate {

@@ -47,6 +47,7 @@
 		FDD0246229ACCD360012F154 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD0246129ACCD360012F154 /* Foundation.framework */; };
 		FDD0246429ACCD3F0012F154 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD0246329ACCD3F0012F154 /* CoreGraphics.framework */; };
 		FDD0246629ACD68A0012F154 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD0246529ACD68A0012F154 /* UIKit.framework */; };
+		FDF0BAEE29DABCFA00244E7F /* heroic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FDF0BAED29DABCFA00244E7F /* heroic.mp3 */; };
 		FDFB155028D323CF00F42B0A /* StudioBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB154F28D323CF00F42B0A /* StudioBottomView.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,10 @@
 		FDD0246129ACCD360012F154 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FDD0246329ACCD3F0012F154 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		FDD0246529ACD68A0012F154 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FDD0246729AF62920012F154 /* SuperpoweredAnalyzer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperpoweredAnalyzer.h; sourceTree = "<group>"; };
+		FDD0246A29B0C3720012F154 /* SuperpoweredGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperpoweredGenerator.h; sourceTree = "<group>"; };
+		FDD0246B29B60FC00012F154 /* SuperpoweredBandpassFilterbank.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperpoweredBandpassFilterbank.h; sourceTree = "<group>"; };
+		FDF0BAED29DABCFA00244E7F /* heroic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heroic.mp3; sourceTree = "<group>"; };
 		FDFB154F28D323CF00F42B0A /* StudioBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioBottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -318,6 +323,9 @@
 				FDD0245A29ACB19D0012F154 /* SuperpoweredDecoder.h */,
 				FD9FC6FA29A6224200F3AC2B /* SuperpoweredIOSAudioIO.h */,
 				FDD0245929ACAEE20012F154 /* SuperpoweredAdvancedAudioPlayer.h */,
+				FDD0246729AF62920012F154 /* SuperpoweredAnalyzer.h */,
+				FDD0246A29B0C3720012F154 /* SuperpoweredGenerator.h */,
+				FDD0246B29B60FC00012F154 /* SuperpoweredBandpassFilterbank.h */,
 			);
 			path = Superpowered;
 			sourceTree = "<group>";
@@ -343,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				FD1267B128B63281008EC465 /* Assets.xcassets */,
+				FDF0BAED29DABCFA00244E7F /* heroic.mp3 */,
 				FD9FC6F529A6220D00F3AC2B /* lycka.mp3 */,
 				FD9FC6F629A6220D00F3AC2B /* nuyorica.m4a */,
 			);
@@ -419,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD1267B528B63281008EC465 /* Preview Assets.xcassets in Resources */,
+				FDF0BAEE29DABCFA00244E7F /* heroic.mp3 in Resources */,
 				FD9FC6F729A6220E00F3AC2B /* lycka.mp3 in Resources */,
 				FD9FC6F829A6220E00F3AC2B /* nuyorica.m4a in Resources */,
 				FD1267B228B63281008EC465 /* Assets.xcassets in Resources */,

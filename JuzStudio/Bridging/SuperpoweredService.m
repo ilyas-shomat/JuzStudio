@@ -9,6 +9,7 @@
 #include "Superpowered.h"
 #include "SuperpoweredAdvancedAudioPlayer.h"
 #include "SuperpoweredIOSAudioIO.h"
+#include "SuperpoweredAnalyzer.h"
 
 @implementation SuperpoweredService {
     Superpowered::AdvancedAudioPlayer *mainPlayer;
@@ -30,18 +31,18 @@ static bool audioProcessing(void *clientdata, float *input, float *output, unsig
     return self;
 }
 
-- (void)setupMainPlayer {
+- (void)setupMainPlayerWithPath:(NSString *)path {
+    const char *pathInChar = [path UTF8String];
+
     mainPlayer = new Superpowered::AdvancedAudioPlayer(44100, 0);
-    mainPlayer -> open([[[NSBundle mainBundle] pathForResource:@"lycka" ofType:@"mp3"] fileSystemRepresentation]);
-    
-    
+    mainPlayer -> open(pathInChar);
+        
     outputIO = [[SuperpoweredIOSAudioIO alloc] initWithDelegate:(id<SuperpoweredIOSAudioIODelegate>)self preferredBufferSize:12
                                             preferredSamplerate:44100
                                            audioSessionCategory:AVAudioSessionCategoryPlayback
                                                        channels:2
                                         audioProcessingCallback:audioProcessing
                                                      clientdata:(__bridge void *)self];
-    
     
     [outputIO start];
 }
@@ -50,12 +51,14 @@ static bool audioProcessing(void *clientdata, float *input, float *output, unsig
     mainPlayer -> togglePlayback();
 }
 
-
 - (bool)audioProcessing:(float *)output numFrames:(unsigned int)numberOfFrames samplerate:(unsigned int)samplerate {
     mainPlayer -> outputSamplerate = samplerate;
     
     if (mainPlayer -> getLatestEvent() == Superpowered::AdvancedAudioPlayer::PlayerEvent_Opened) {
-        
+    }
+    
+    if (mainPlayer -> eofRecently()) {
+        self -> _audioCompletion();
     }
     
     bool silence = !mainPlayer -> processStereo(output, false, numberOfFrames);
@@ -63,18 +66,17 @@ static bool audioProcessing(void *clientdata, float *input, float *output, unsig
     return !silence;
 }
 
-- (void)getFrequencies:(float *)frequencies {
-    memset(frequencies, 0, 8 * sizeof(float));
-    
-    unsigned int currentPosition = __sync_fetch_and_add(&bandsPos, 0);
-    if (currentPosition > bandsReadPos) {
-        unsigned int positionsElapsed = currentPosition - bandsReadPos;
-        float multiplier = 1.0f / float(positionsElapsed * lastNumberOfFrames);
-        while (positionsElapsed--) {
-            float *b = &bands[bandsReadPos++ & 127][0];
-            for (int n = 0; n < 8; n++) frequencies[n] += b[n] * multiplier;
-        }
-    }
-}
+//- (void)handleAudiosPlayingEnd {
+//    __weak typeof(self) weakSelf = self;
+//
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        __strong typeof(self) strongSelf = weakSelf;
+//
+//        if (strongSelf) {
+//            while (!(strongSelf -> mainPlayer -> eofRecently())) {}
+//            strongSelf -> _audioCompletion();
+//        }
+//    });
+//}
 
 @end
