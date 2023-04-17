@@ -16,7 +16,7 @@ struct AudioWaveView: View {
 
     @Binding var incrementor: Int
     
-    private var reader: ScrollViewProxy
+    private var reader: ScrollViewProxy?
 
     private var bits: [CGFloat]
     private var waveColor: Color
@@ -26,7 +26,7 @@ struct AudioWaveView: View {
         incrementor: Binding<Int>,
         bits: [CGFloat],
         waveColor: Color,
-        reader: ScrollViewProxy,
+        reader: ScrollViewProxy? = nil,
         waveTapped: @escaping () -> Void
     ) {
         _incrementor = incrementor
@@ -45,7 +45,7 @@ struct AudioWaveView: View {
                     waveTapped()
                 }
                 
-                reader.scrollTo(index)
+                reader?.scrollTo(index)
             }
             .frame(height: 84)
     }
@@ -68,7 +68,18 @@ struct AudioWaveView: View {
     
     private func setBitContent(height: CGFloat) -> some View {
         Divider()
-            .frame(width: StudioConstants.amplitudeWeight, height: height)
+            .frame(width: StudioConstants.amplitudeWidth, height: height)
             .background(waveColor)
+    }
+}
+
+struct AudioWaveView_Preview1: PreviewProvider {
+    static var previews: some View {
+        AudioWaveView(
+            incrementor: .constant(0),
+            bits: testBits1,
+            waveColor: .appPurple,
+            waveTapped: {}
+        )
     }
 }

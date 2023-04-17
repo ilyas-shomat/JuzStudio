@@ -145,76 +145,76 @@ struct MixerCell: View {
 }
 
 
-struct MixerCell_Previews: PreviewProvider {
-    static var previews: some View {
-        MixerCell(
-            entity: .init(type: .music, desc1: "Beat’s Name", desc2: "Beat’s Key"),
-            backgroundColor: .appLightBlue
-        )
-            .previewLayout(.sizeThatFits)
-            .background(Color.black)
-    }
-}
-
-struct MixerCell_Previews_Low_Unfolded: PreviewProvider {
-    static var previews: some View {
-        MixerCell(
-            entity: .init(type: .music, desc1: "Beat’s Name", desc2: "Beat’s Key"),
-            backgroundColor: .appLightGreen,
-            mixerFoldedState: .low
-            
-        )
-        .previewLayout(.sizeThatFits)
-        .background(Color.black)
-    }
-}
-
-struct MixerCell_Previews_Active_Voice: PreviewProvider {
-    static var previews: some View {
-        MixerCell(
-            entity: .init(type: .voice, desc1: "Голос"),
-            backgroundColor: .appLightBlue
-        )
-            .previewLayout(.sizeThatFits)
-            .background(Color.black)
-    }
-}
-
-struct MixerCell_Previews_Empty_State: PreviewProvider {
-    static var previews: some View {
-        MixerCell(
-            entity: .init(type: .empty, desc1: "Добавить дорожку"),
-            backgroundColor: .appWhiteWithOpacity,
-            mixerFoldedState: .full
-        )
-        .previewLayout(.sizeThatFits)
-        .background(Color.black)
-    }
-}
-
-struct MixerCell_Previews_Empty_Medium_State: PreviewProvider {
-    static var previews: some View {
-        MixerCell(
-            entity: .init(type: .empty, desc1: "Добавить дорожку"),
-            backgroundColor: .appWhiteWithOpacity,
-            mixerFoldedState: .medium
-        )
-        .previewLayout(.sizeThatFits)
-        .background(Color.black)
-    }
-}
-
-struct MixerCell_Previews_Unfolded: PreviewProvider {
-    static var previews: some View {
-        MixerCell(
-            entity: .init(type: .music, desc1: "Beat’s Name", desc2: "Beat’s Key"),
-            backgroundColor: .appPurple,
-            mixerFoldedState: .full
-        )
-        .previewLayout(.sizeThatFits)
-        .background(Color.black)
-    }
-}
+//struct MixerCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MixerCell(
+//            entity: .init(type: .music, desc1: "Beat’s Name", desc2: "Beat’s Key"),
+//            backgroundColor: .appLightBlue
+//        )
+//            .previewLayout(.sizeThatFits)
+//            .background(Color.black)
+//    }
+//}
+//
+//struct MixerCell_Previews_Low_Unfolded: PreviewProvider {
+//    static var previews: some View {
+//        MixerCell(
+//            entity: .init(type: .music, desc1: "Beat’s Name", desc2: "Beat’s Key"),
+//            backgroundColor: .appLightGreen,
+//            mixerFoldedState: .low
+//            
+//        )
+//        .previewLayout(.sizeThatFits)
+//        .background(Color.black)
+//    }
+//}
+//
+//struct MixerCell_Previews_Active_Voice: PreviewProvider {
+//    static var previews: some View {
+//        MixerCell(
+//            entity: .init(type: .voice, desc1: "Голос"),
+//            backgroundColor: .appLightBlue
+//        )
+//            .previewLayout(.sizeThatFits)
+//            .background(Color.black)
+//    }
+//}
+//
+//struct MixerCell_Previews_Empty_State: PreviewProvider {
+//    static var previews: some View {
+//        MixerCell(
+//            entity: .init(type: .empty, desc1: "Добавить дорожку"),
+//            backgroundColor: .appWhiteWithOpacity,
+//            mixerFoldedState: .full
+//        )
+//        .previewLayout(.sizeThatFits)
+//        .background(Color.black)
+//    }
+//}
+//
+//struct MixerCell_Previews_Empty_Medium_State: PreviewProvider {
+//    static var previews: some View {
+//        MixerCell(
+//            entity: .init(type: .empty, desc1: "Добавить дорожку"),
+//            backgroundColor: .appWhiteWithOpacity,
+//            mixerFoldedState: .medium
+//        )
+//        .previewLayout(.sizeThatFits)
+//        .background(Color.black)
+//    }
+//}
+//
+//struct MixerCell_Previews_Unfolded: PreviewProvider {
+//    static var previews: some View {
+//        MixerCell(
+//            entity: .init(type: .music, desc1: "Beat’s Name", desc2: "Beat’s Key"),
+//            backgroundColor: .appPurple,
+//            mixerFoldedState: .full
+//        )
+//        .previewLayout(.sizeThatFits)
+//        .background(Color.black)
+//    }
+//}
 
 
 

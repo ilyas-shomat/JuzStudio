@@ -18,4 +18,5 @@ struct MixerCellEntity {
     var type: MixerType = .empty
     var desc1: String? = ""
     var desc2: String? = ""
+    var amplitudes: [CGFloat]? 
 }

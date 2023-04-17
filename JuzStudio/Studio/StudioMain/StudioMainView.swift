@@ -11,9 +11,9 @@ import UIKit
 import Combine
 
 struct StudioMainView: View {
-    @ObservedObject private var viewController: StudioMainViewController
+    @ObservedObject private var viewController: StudioScene
             
-    init(_ viewController: StudioMainViewController) {
+    init(_ viewController: StudioScene) {
         self.viewController = viewController
     }
     
@@ -181,7 +181,7 @@ struct StudioMainView: View {
 
 struct StudioMainView_Previews: PreviewProvider {
     static var previews: some View {
-        StudioMainView(StudioMainViewController())
+        StudioMainView(StudioScene())
     }
 }
 
